@@ -58,5 +58,11 @@ class CouchDB2Sqlite:
         self.conn.commit()
 
 
-CouchDB2Sqlite(config.username, config.password, config.database_couchdb, config.database_sqlite).insert_data()
+if __name__ == '__main__':
+    username = config.username
+    password = config.password
+    database_couchdb = config.database_couchdb
+    database_sqlite = config.database_sqlite
+    a = CouchDB2Sqlite(username, password, database_couchdb, database_sqlite)
+    a.insert_data()
 
